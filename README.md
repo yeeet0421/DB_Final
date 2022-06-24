@@ -24,7 +24,7 @@ pip3 install yake
 ```
 
 ### Instructions
-You can run both backend and frontend to experience the application; however, you can run the frontend by itself. It would show the results of using "sql injection" as the keyword. #put notice effect
+You can run both backend and frontend to get a complete experience from the application; however, you can run the frontend by itself. It would show the results of using "sql injection" as the keyword. #put some markdown notice effect
 <br />
 Open hw3_backend folder in terminal and run:
 ```
@@ -38,6 +38,12 @@ Open hw3_frontend folder in terminal and run:
 rails s
 ```
 to run the frontend application.
+
+Open
+```
+localhost:3000
+```
+on Google Chrome to demo the application
 
 ## Function
 ### Comment Map
