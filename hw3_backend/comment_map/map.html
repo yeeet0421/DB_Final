@@ -1,0 +1,116 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 576ps;
+            height: 576px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "sql injection", "label": "sql injection", "shape": "dot", "size": 13.0}, {"id": "CTF lab", "label": "CTF lab", "shape": "dot", "size": 2.0}, {"id": "php", "label": "php", "shape": "dot", "size": 3.0}, {"id": "Awesome", "label": "Awesome", "shape": "dot", "size": 3.6666666666666665}, {"id": "informative", "label": "informative", "shape": "dot", "size": 3.3333333333333335}, {"id": "channel", "label": "channel", "shape": "dot", "size": 3.6666666666666665}, {"id": "query", "label": "query", "shape": "dot", "size": 1.3333333333333333}, {"id": "stuff", "label": "stuff", "shape": "dot", "size": 2.3333333333333335}, {"id": "Malaysia", "label": "Malaysia", "shape": "dot", "size": 1}, {"id": "teaching", "label": "teaching", "shape": "dot", "size": 2.3333333333333335}, {"id": "Scott", "label": "Scott", "shape": "dot", "size": 1.3333333333333333}, {"id": "fun", "label": "fun", "shape": "dot", "size": 3.0}, {"id": "prevent SQL", "label": "prevent SQL", "shape": "dot", "size": 1.3333333333333333}, {"id": "upload", "label": "upload", "shape": "dot", "size": 2.6666666666666665}, {"id": "Idea", "label": "Idea", "shape": "dot", "size": 1.0}, {"id": "follow", "label": "follow", "shape": "dot", "size": 1.0}, {"id": "DROP DATABASE command", "label": "DROP DATABASE command", "shape": "dot", "size": 1}, {"id": "VAPT Track", "label": "VAPT Track", "shape": "dot", "size": 1}, {"id": "server", "label": "server", "shape": "dot", "size": 1.0}, {"id": "raw", "label": "raw", "shape": "dot", "size": 1}, {"id": "Simply", "label": "Simply", "shape": "dot", "size": 1}]);
+        edges = new vis.DataSet([{"from": "sql injection", "length": 45.0, "to": "CTF lab", "width": 0.1}, {"from": "sql injection", "length": 45.0, "to": "Awesome", "width": 0.1}, {"from": "sql injection", "length": 53.333333333333336, "to": "fun", "width": 0.1}, {"from": "sql injection", "length": 45.0, "to": "prevent SQL", "width": 0.1}, {"from": "sql injection", "length": 45.0, "to": "upload", "width": 0.1}, {"from": "CTF lab", "length": 53.333333333333336, "to": "Awesome", "width": 0.1}, {"from": "Awesome", "length": 53.333333333333336, "to": "follow", "width": 0.1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -1000,
+            "springConstant": 0.001,
+            "springLength": 20
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
