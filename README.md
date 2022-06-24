@@ -31,7 +31,7 @@ Open hw3_backend folder in terminal and run:
 python3 download_comments.py <keyword>
 ```
 to create needed files. This process may take 5-10 min.
-Please change <keyword> to the keyword you would like to search (on YouTube).
+Please change \<keyword> to the keyword you would like to search (on YouTube).
 
 Open hw3_frontend folder in terminal and run:
 ```
