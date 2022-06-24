@@ -74,8 +74,8 @@ def main():
     service_personal = auth_api.get_authenticated_service()
     vids, comments_all = download_comments(service_personal,keyword,result_num)
     ## save quota
-    os.environ['DB_USERNAME'] = "postgres"
-    os.environ['DB_PASSWORD'] = 'eh20010421'
+    os.environ['DB_USERNAME'] = #please insert your database's name
+    os.environ['DB_PASSWORD'] = #please insert your database's password
     comments_all = comments_all[['commentId','videoId','textDisplay','publishedAt','authorDisplayName','authorProfileImageUrl','likeCount']]
     # remove comments contain code
     remove_code = ['pip', 'install', 'ValueError:', 'import']
@@ -93,9 +93,9 @@ def main():
     comments_selected.drop(['lang_detect'], axis=1, inplace=True)
     print("Connecting database")
     conn = psycopg2.connect(
-        host="database-1.cgrpfuvmepy7.us-east-1.rds.amazonaws.com",
-        database="hw3",
-        port='5432',
+        host=,#please insert your own host
+        database="hw3", #please create your database first
+        port='5432',#please insert your port, usually it's 5432
         user=os.environ['DB_USERNAME'],
         password=os.environ['DB_PASSWORD'])
     
