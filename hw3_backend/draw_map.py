@@ -104,13 +104,13 @@ def get_map_details(target_f):
 def get_map():
     ## change them to sql thingy
     # keyword='test'
-    os.environ['DB_USERNAME'] = "postgres"
-    os.environ['DB_PASSWORD'] = 'eh20010421'
+    os.environ['DB_USERNAME'] = #please insert your database's name
+    os.environ['DB_PASSWORD'] = #please insert your database's password
     # Construct connection string
     conn = psycopg2.connect(
-        host="database-1.cgrpfuvmepy7.us-east-1.rds.amazonaws.com",
-        database="hw3",
-        port='5432',
+        host=,#please insert your own host
+        database="hw3", #please create your database first
+        port='5432',#please insert your port, usually it's 5432
         user=os.environ['DB_USERNAME'],
         password=os.environ['DB_PASSWORD'])
 
