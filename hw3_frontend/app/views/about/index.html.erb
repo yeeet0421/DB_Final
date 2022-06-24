@@ -1,0 +1,36 @@
+
+<header style="margin:30px"><h1>Top English Comments</h1></header>
+
+<%CSV.read("../hw3_backend/comment_map/top_comments.csv")%>
+<%CSV.read("../hw3_backend/comment_map/vids.csv")%>
+
+<% CSV.foreach("../hw3_backend/comment_map/top_comments.csv") do |row| %>
+    <% if row[5] != "authorProfileImageUrl" %>
+        <div class="row">
+            <div class="column">
+                <% CSV.foreach("../hw3_backend/comment_map/vids.csv") do |vid| %>
+                    <% if vid[0] == row[1] %>
+                        <%= link_to "https://www.youtube.com/watch?v=#{row[1]}", target: :_blank do%>
+                            <%= image_tag(vid[3], :height => "200px", style: "border-radius: .5em")%>
+                        <%end%>
+                        <p style="font-size:18px;margin:5px"><%= "#{vid[1]}"%></p>
+                        <p style="margin:5px"><b><%= "#{vid[2]}" %></b></p>
+                    <%end%>
+                <%end%>
+            </div>
+            <div class="column">
+                <div style="border: 1px solid #D5D8D4 ; margin: 2px; border-radius: .5em; padding: 12px;">
+                    <img src="<%= row[5]%>" style="border-radius: 5em; height:30px">
+                    <span>&nbsp;<b><%= "#{row[4]}"%></b>&nbsp;&nbsp;&nbsp;</span>
+                    <span style="color:#808080;"><%= "#{row[3]}" %></span>
+                    <p style="margin:10px"><%= simple_format("#{row[2]}") %></p>
+                    <p>
+                        <img src="<%=asset_path('good.png')%>" style="margin:0px;height:20px">
+                        <span style="color:#808080;"><%= "#{row[6]}" %></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<%end%>
+
