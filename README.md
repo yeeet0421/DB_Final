@@ -33,24 +33,21 @@ pip3 install yake
 <br />
 1. Start up your database first
 
-2. Open hw3_backend folder in terminal and run:
+2. Open hw3_backend folder in terminal and run the code to create needed files. This process may take 5-10 min.
+Please change \<keyword> to the keyword you would like to search (on YouTube).
 ```
 python3 download_comments.py <keyword>
 ```
-to create needed files. This process may take 5-10 min.
-Please change \<keyword> to the keyword you would like to search (on YouTube).
 
-3. Open hw3_frontend folder in terminal and run:
+3. Open hw3_frontend folder in terminal and run the code to run the frontend application.
 ```
 rails s
 ```
-to run the frontend application.
 
-4. Open
+4. Open this site on Google Chrome to demo the application.
 ```
 localhost:3000
 ```
-on Google Chrome to demo the application
 
 ## Function
 ### Comment Map
