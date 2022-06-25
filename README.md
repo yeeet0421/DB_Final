@@ -1,7 +1,8 @@
 # DB_Final
 ## Manual
 ### Non Library Prerequisites
-In order to use YouTube API, please apply project.json and client_secret.json from Google Cloud Platfrom. <br/ > After application, please put them under the hw3_backend folder and change the commented part in auth.api under hw3_backend.<br />
+In order to use YouTube API, please apply project.json and client_secret.json from Google Cloud Platfrom. <br/ > 
+After application, please put them under the hw3_backend folder and change the commented part in auth.api under hw3_backend.<br />
 Related Instructions: <br />
 https://console.cloud.google.com/?hl=zh-TW<br />
 https://cloud.google.com/video-intelligence/docs/common/auth 
@@ -24,7 +25,7 @@ pip3 install yake
 ```
 
 ### Instructions
-You can run both backend and frontend to get a complete experience from the application; however, you can run the frontend by itself. It would show the results of using "sql injection" as the keyword. #put some markdown notice effect
+<mark>You can run both backend and frontend to get a complete experience from the application; however, you can run the frontend by itself. It would show the results of using "sql injection" as the keyword. </mark>
 <br />
 Open hw3_backend folder in terminal and run:
 ```
