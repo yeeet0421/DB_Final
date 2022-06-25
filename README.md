@@ -30,20 +30,23 @@ pip3 install yake
 ### Instructions
 <mark>You can run both backend and frontend to get a complete experience from the application; however, you can run the frontend by itself. It would show the results of using "sql injection" as the keyword. </mark>
 <br />
-Open hw3_backend folder in terminal and run:
+1. Start up your database first
+
+<br />
+2. Open hw3_backend folder in terminal and run:
 ```
 python3 download_comments.py <keyword>
 ```
 to create needed files. This process may take 5-10 min.
 Please change \<keyword> to the keyword you would like to search (on YouTube).
 
-Open hw3_frontend folder in terminal and run:
+3. Open hw3_frontend folder in terminal and run:
 ```
 rails s
 ```
 to run the frontend application.
 
-Open
+4. Open
 ```
 localhost:3000
 ```
