@@ -5,7 +5,7 @@
 ## Manual
 ### Non Library Prerequisites
 In order to use YouTube API, please apply project.json and client_secret.json from Google Cloud Platfrom. 
-<br/ > 
+
 After application, please put them under the hw3_backend folder and change the commented part in auth.api under hw3_backend.<br />
 Related Instructions: <br />
 https://console.cloud.google.com/?hl=zh-TW<br />
