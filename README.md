@@ -1,4 +1,7 @@
 # DB_Final
+## Motivation
+在YouTube上查詢時，有時會好奇相關影片底下的評論主要在討論些什麼主題，而光看搜索頁面查詢出來的影片們也不知道該從哪個影片開始看起。以此為發想製作了在查詢關鍵字以後，可以了解前面20部影片底下相關性高的留言主要討論的話題，加上引導導向的YouTube搜索界面。
+
 ## Manual
 ### Non Library Prerequisites
 In order to use YouTube API, please apply project.json and client_secret.json from Google Cloud Platfrom. <br/ > 
@@ -45,9 +48,6 @@ Open
 localhost:3000
 ```
 on Google Chrome to demo the application
-
-## Motivation
-在YouTube上查詢時，有時會好奇相關影片底下的評論主要在討論些什麼主題，而光看搜索頁面查詢出來的影片們也不知道該從哪個影片開始看起。以此為發想製作了在查詢關鍵字以後，可以了解前面20部影片底下相關性高的留言主要討論的話題，加上引導導向的YouTube搜索界面。
 
 ## Function
 ### Comment Map
